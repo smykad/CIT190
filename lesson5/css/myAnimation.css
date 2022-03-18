@@ -1,0 +1,38 @@
+body{
+  background-image:url('../media/skyBackground.jpg');
+  background-repeat:no-repeat;
+  background-size:950px auto;
+  background-color:black;
+}
+#container {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+#balloon {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  background-color: none;
+}
+p{
+  color:darkslategray;
+}
+input{
+	text-align:center;
+}
+#coords{
+	position:absolute;
+	left:550px;
+	top:20px;
+}
+section{
+	width:900px;
+	height:600px;
+}
+button{
+	width:200px;
+	padding:10px;
+	color:ghostwhite;
+	background-color:darkcyan;
+}

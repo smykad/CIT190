@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Animation</title>
+
+<link href="css/myAnimation.css" rel="stylesheet" type="text/css" /> 
+</head>
+<body>
+    <article>
+        <section>
+            <div id ="container">
+                <img alt="Hot Air Balloon" src="media/balloon.png" id ="balloon" />
+            </div>
+        </section>
+    
+        <section style="background-color:darkseagreen;opacity:.9;padding-top:5px;padding-bottom:10px;height:100px;">
+            <p style="text-align:center;">
+                <button id="down">Move Zeppelin down</button>
+                <button id="up">Move Zeppelin up </button>
+                <button id="right">Move Zeppelin right</button>
+                <button id="left">Move Zeppelin left</button>
+                <button id="rock">Make Zeppelin dance</button>
+                <button id="stop">Make Zeppelin stop</button>
+                <button id="diagonal">Move Zeppelin Diagonally</button>
+            </p>
+        </section>
+
+        <script src="js/myanimation.js"></script>
+
+        <div id="coords">
+            <p> X Coordinate:<input type="text" id="xCoord" /><br> 
+            Y Coordinate:<input type="text" id="yCoord" /></p>
+        </div>
+        
+    </article>
+    
+</body>
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+    <pirate>
+        <name>Monkey D. Luffy</name>
+        <crew>Strawhat Pirates</crew>
+        <bounty>1,500,000,000</bounty>
+    </pirate>
+    <pirate>
+        <name>Trafalgar D. Water Law</name>
+        <crew>Heart Pirates</crew>
+        <bounty>500,000,000</bounty>
+    </pirate>
+    <pirate>
+        <name>Roronoa Zoro</name>
+        <crew>Strawhat Pirates</crew>
+        <bounty>320,000,000</bounty>
+    </pirate>
+</catalog>

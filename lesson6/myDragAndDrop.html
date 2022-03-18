@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+section{
+  display:flex;
+  flex-wrap:wrap;
+}
+p{
+	flex:1;
+	width:200px;
+}
+</style>
+   <script src="https://code.jquery.com/jquery-latest.js"></script>
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"><script>
+      $(function()
+        {
+            $("#MoveMe1").draggable();
+            $("#MoveMe2").draggable();
+            $("#MoveMe3").draggable();
+            $("#MoveMe4").draggable();
+            $("#MoveMe5").draggable();
+            $("#MoveMe6").draggable();
+            $("#MoveMe7").draggable();                       
+            
+        });
+</script>
+<title>Creating a Draggable Element</title>
+</head>
+
+<body>
+
+   <h1>A Sunny Day Painting with Pirates</h1>
+   <h2>Create a painting by dragging and dropping the images</h2>
+   <section>
+   <p id="MoveMe1"><img src="media/sky.png" /></p>         
+   <p id="MoveMe4"><img src="media/sun.png" /></p>
+   <p id="MoveMe5"><img src="media/clouds.png" /></p>
+   <p id="MoveMe2"><img src="media/grass.png" /></p>
+   <p id="MoveMe3"><img src="media/water.png" /></p>
+   <p id="MoveMe6"><img src="media/pirates.png" /></p> 
+   <p id="MoveMe7"><img src="media/frame.png" /></p> 
+   </section>
+</body>
+</html>

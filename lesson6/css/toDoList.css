@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+body {
+  font-family: "Audiowide", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #23272A;
+}
+#page {
+  background-color: black;
+  box-shadow: 2px 2px #7289DA;
+  margin: 0 auto 0 auto;
+  position: relative;
+  text-align: center;
+}
+/* Responsive page rules at bottom of style sheet */
+h1 {
+  background-size: 50%;
+  text-align: center;
+  text-indent: -1000%;
+  height: 75px;
+  line-height: 75px;
+  width: 117px;
+  margin: 0 auto 0 auto;
+  padding: 30px 10px 20px 10px;
+}
+h2 {
+  color: #7289DA;
+  background-color: #99AAB5;
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  display: inline-block;
+  margin: 20px 0 23px 0;
+  width: 100%;
+  padding-top: 10px;
+}
+h2 span {
+  background-color: #7289DA;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  top: -5px;
+  height: 22px;
+  width: 26px;
+  padding: 4px 0 0 0;
+}
+ul {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  background-color: #7289DA;
+  opacity: .8;
+  color: #FFFFFF;
+  border: 1px solid darkgray;
+  font-size: 24px;
+  letter-spacing: .05em;
+  list-style-type: none;
+  text-shadow: 1px 1px gray;
+  text-align: left;
+  height: 50px;
+  padding-left: 1em;
+  padding-top: 10px;
+}
+.complete {
+  background-color: #99AAB5;
+  opacity: .8;
+  color: #7289DA;
+  background-image: url("../media/trash-icon.png");
+  background-position: right, center;
+  background-repeat: no-repeat;
+  border-top: 1px solid #23272A;
+  border-bottom: 1px solid #23272A;
+  text-shadow: 1px 1px 1px #23272A;
+}
+.complete a {
+  display: block;
+}
+/* FORM STYLES */
+form {
+  padding: 0 20px 20px 20px;
+}
+input[type=text], input[type=password], textarea {
+  background-color: #FFFFFF;
+  color: #7289DA;
+  font-size: 24px;
+  width: 96%;
+  padding: 4px 6px;
+  border: 1px solid gray;
+  border-radius: 8px;
+}
+input[type=submit], a.add, button, a.show {
+  background-color: #7289DA;
+  box-shadow: 2px 2px #23272A;
+  color: #FFFFFF;
+  border-radius: 8px;
+  border: none;
+  padding: 8px 10px;
+  margin-top: 10px;
+  
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+input[type=submit], a.add, button {
+  float: right;
+}
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+  border: 1px solid #23272A;
+  background-color: #23272A;
+  color: #FFFFFF;
+  outline: none;
+}
+input[type=submit]:hover, a.add:hover, a.show:hover {
+  background-color: #FFFFFF;
+  color: #7289DA;
+  border: 2px solid #23272A;
+  box-shadow: 2px 2px #23272A;
+  cursor: pointer;
+}
+/* form example */
+#newItemButton {
+  padding: 10px 20px 75px 20px;
+  display: none;
+}
+#newItemForm {
+  padding-top: 20px;
+}
+#itemDescription {
+  width: 360px;
+}
+#newItemForm input[type=submit] {
+  margin-top: 0;
+  text-align: left;
+}
+/* Small screen:mobile */
+@media only screen and (max-width: 500px) {
+  body {
+    background-color: #23272A;
+  }
+  #page {
+    max-width: 480px;
+  }
+}
+@media only screen and (min-width: 501px) and (max-width: 767px) {
+  #page {
+    max-width: 480px;
+    margin: 20px auto 20px auto;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  #page {
+    max-width: 480px;
+    margin: 20px auto 20px auto;
+  }
+}
+/* Larger screens act like a demo for the app */
+@media only screen and (min-width: 960px) {
+  #page {
+    max-width: 480px;
+    margin: 20px auto 20px auto;
+  }
+}

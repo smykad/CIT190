@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head><title>Changing Content</title></head>
+<body>
+<h1>Douglas Adams Quotes</h1>
+<p>“I may not have gone where I intended to go, but I think I have ended up<br> where I needed to be.”</p>
+<p>“I love deadlines. I love the whooshing noise they make as they go by.”</p>
+<p>“The story so far:<br>
+    In the beginning the Universe was created.<br>
+    This has made a lot of people very angry and been widely regarded as a bad move.”</p>
+<p>“I refuse to answer that question on the grounds that I don't know the <br>answer”</p>
+
+<button type="button" onclick="myChangeA('25pt')">Button A</button>
+<button type="button" onclick="myChangeB()">Button B</button>
+</body>
+<script>
+function myChangeA(myVar)
+    {
+        var para = document.querySelectorAll("p");
+        for ( var i = 0; i < para.length; i++ )
+        {
+        	para[i].style.fontSize=myVar;
+	    } 
+	 }
+    func
+function myChangeB(){
+    myChangeA('15pt')
+    var myVar = document.querySelectorAll("p");
+    myVar[0].style.background="lightblue";
+    myVar[1].style.background="lightblue";
+}
+</script>
+
+</html>

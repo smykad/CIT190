@@ -1,0 +1,43 @@
+body{
+    font-family:"Lucida Console", "Courier New", monospace;
+    font-size:16pt;
+    background-image:url('../media/background.jpg');
+    background-repeat:repeat-y;
+    background-size:100%;
+    background-attachment: fixed;
+    background-color:rgb(35, 39, 42);
+}
+
+h1{
+    color:rgb(56, 59, 62);
+    font-size:300%;
+    text-align:center;
+    font-weight:bolder;
+    background: rgb(252, 245, 229);
+    padding:10px;
+    border-radius:10px;
+    width:35%;
+    margin:1%;
+    text-shadow:3px 3px 3px rgb(124, 87, 61);
+}
+
+p{
+    margin:1%;
+    color:rgb(56, 59, 62);
+    background: rgb(252, 245, 229);
+    text-shadow:3px 3px 3px rgb(124, 87, 61);
+    width:35%;
+    padding:10px;
+    border-radius:10px;
+}
+
+.button{
+    background-color: rgb(252, 245, 229);
+    
+    border: rgb(124, 87, 61);
+    border-radius: 7px;
+}
+.button:hover{
+    background-color: rgb(235, 213, 179);
+
+}

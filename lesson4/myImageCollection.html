@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image Collection DOM Example</title>
+</head>
+<body onload="processName();">
+
+    <a href="media/aurora.jpg"><img alt="Northern Lights" src="media/thumbnails/aurora.jpg" style="width: 250px; height: 188px"></a>
+
+    <a href="media/island.jpg"><img alt="Island" src="media/thumbnails/island.jpg" style="width: 250px; height: 188px"></a>
+
+    <a href="media/starry.jpg"><img alt="Starry Sky on Mountain" src="media/thumbnails/starry.jpg" style="width: 250px; height: 188px"></a>
+
+    <a href="media/sunset.jpg"><img alt="Sunset Tree" src="media/thumbnails/sunset.jpg" style="width: 250px; height: 188px"></a>
+
+
+<h3>Photo Name:</h3>
+<p id="name"></p>
+<h3>Photo Source</h3>
+<p id="source"></p>
+<h3>Photo Text Links</h3>
+<nav id="links"></nav>
+</body>
+
+<script>
+function processName(){
+	var contents = "";
+	for ( var i = 0; i < document.images.length; i++ ){
+		     contents += i+1 + ". " +  document.images[i].alt + " ";
+	} 
+	document.getElementById( "name" ).innerHTML = contents;
+	processSource();  
+}	
+function processSource(){
+	var contents = "";
+	for ( var i = 0; i < document.images.length; i++ ){
+	    contents += i+1 + ". " +  document.images[i].src + " ";
+	}
+	document.getElementById( "source" ).innerHTML = contents;
+	processLinks();
+}
+function processLinks(){
+	var contents = "| ";
+		for ( var i = 0; i < document.links.length; i++ ){
+		   contents += "<a href=" + document.links[i].href + ">" + 
+               document.images[i].alt + "</a>  | ";
+		}
+		document.getElementById( "links" ).innerHTML = contents;
+}
+</script>
+
+</html>

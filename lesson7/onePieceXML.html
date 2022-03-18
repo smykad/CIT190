@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>One Piece Pirates</title>
+<style>
+
+div {
+    background-color: darkgoldenrod;
+    border-radius: 30px;
+    opacity: .7;
+    padding: 10px 0px 20px 40px;
+    text-align: left;
+    width: 40%;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+    font-weight: 900;
+    font-size: 120%;
+}
+h2 {
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+    text-shadow: 2px 2px darkgoldenrod;
+    color: white;
+}
+th {
+    border-top: dashed white 5px;
+    border-bottom: dashed white 5px;
+    color: white;
+    text-shadow: 1px 1px black;
+    padding: 20px 0px;
+    margin: 0px;
+}
+td {
+    border-bottom: solid 1px white;
+    box-shadow: 1px 1px black;
+}
+.alignRight {
+    text-align: right;
+}
+button {
+    border-radius: 20px;
+    padding: 10px;
+}
+</style>
+</head>
+<body>
+<h2>My One Piece Pirates:</h2>
+<div id="pirateInfo"></div>
+<button id="load">Get my favorite Pirates list</button>
+<script>
+var myCollection = document.getElementById("load");
+myCollection.addEventListener("click", function() {
+    var xhttp=new XMLHttpRequest();
+    xhttp.onreadystatechange=function() {
+        if (xhttp.readyState==4 && xhttp.status==200)
+            {
+                xmlDoc=xhttp.responseXML;
+                var txt="<table style='border:0'><tr><th>Pirate</th><th>Crew</th><th>Bounty</th>";
+                var n=xmlDoc.getElementsByTagName("name");
+                var c=xmlDoc.getElementsByTagName("crew");
+                var b=xmlDoc.getElementsByTagName("bounty");
+                for (var i=0;i<n.length;i++)
+                    {
+                        txt=txt + "<tr><td>";
+                        txt=txt + n[i].childNodes[0].nodeValue + "</td><td>";
+                        txt=txt + c[i].childNodes[0].nodeValue + "</td><td class='alignRight'>";
+                        txt=txt + b[i].childNodes[0].nodeValue + "</td></tr>";
+                    }
+                txt = txt + "</table>";    
+                document.getElementById("pirateInfo").innerHTML=txt;
+                document.getElementById("load").style.visibility='hidden';
+            }
+    }
+    xhttp.open("GET","xml/onePiece.xml",true);
+    xhttp.send();
+});
+</script>
+</body>
+</html>
