@@ -1,30 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Google Charts</title>
-    <script type = "text/javascript" src = "https://www.gstatic.com/charts/loader.js"></script>
-<script>
-    google.charts.load('current', {packages: ['corechart']});
-</script>
+<title>Simple API</title>
+<script type = "text/javascript" src = "https://www.gstatic.com/charts/loader.js"></script>
+<script>google.charts.load('current', {packages: ['corechart']});</script>
 </head>
+<style>
+    fieldset {
+        padding: 1%;
+        flex: 1;
+        min-width: 400px;
+        width:30%;
+        margin: 1px;
+        opacity: .8;
+        margin: 10px;
+
+
+    }
+</style>
 <body>
-    <div id = "container" style = "width: 550px; height: 400px; margin: 0 auto"></div>
-    <script>
-            function drawChart() {
-            // Define the chart to be drawn.
-             var data = google.visualization.arrayToDataTable([
-                    ['Year', 'Protein (grams)', 'Carbs (grams)','Zip'],
-                    ['1970-79', 96, 395, 19],
-                    ['1980-89', 100, 421, 21],
-                    ['1990-99', 108, 478, 22],
-                    ['2006', 111, 474, 23]
-                ]);
-             var options = {title: 'Average Daily Consumption'};
-            // Instantiate and draw the chart.
-            var chart = new google.visualization.ColumnChart(document.getElementById('container'));
+    <fieldset>
+    <div id = "container" style = "width: 550px; height: 200px; margin: 0 auto"></div>
+    </fieldset>
+</body>
+<script>
+    function drawChart() {
+        // Define the chart to be drawn.
+        var data = google.visualization.arrayToDataTable([
+            ['Month', '1 in', '3 in','5 in', '10 in'],
+            ['January', 10.0, 3.2, 1.1, 0.1],
+            ['February', 7.6, 2.1, 0.6, 0.1],
+            ['March', 3.9, 1.1, 0.3, 0.1],
+            ['April', 1.5, 0.5, 0.3, 0.0],
+            ['November', 2.0, 0.5, 0.3, 0.1],
+            ['December', 7.5, 2.3, 0.9, 0.4]
+
+        ]);
+        var options = {
+            title: 'Traverse City Snowfall Averages',
+            height: 200,
+            description: 'fart'
+        };
+        // Instantiate and draw the chart.
+        var chart = new google.visualization.ColumnChart(document.getElementById('container'));
             chart.draw(data, options);
         }
-    google.charts.setOnLoadCallback(drawChart);
+        google.charts.setOnLoadCallback(drawChart);
     </script>
-</body>
 </html>
