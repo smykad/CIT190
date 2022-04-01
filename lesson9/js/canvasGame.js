@@ -9,6 +9,7 @@ var myObstacles = [];
 var myScore;
 var myMusic;
 var myCrash;
+var myGameOverText;
 
 const up = document.getElementById('up');
 const down = document.getElementById('down');
@@ -17,12 +18,12 @@ const right = document.getElementById('right');
 
 
 function startGame() {
-
+    document.getElementById("play").style.visibility = "hidden"; 
     myGamePiece = new component(c, c, 'none', w*.01, h*.5, 'pirate');
     myScore = new component(c*.75+"px", "Consoloas", "white", w*.01, h*.06, "text");
-    mySplash = new sound("media/splash.wav");
+    myGameOverText = new component(c*.75+"px", "Consoloas", "white", w*.01, h*.06, "text");
+    mySplash = new sound("media/piratesink.wav");
     myMusic = new sound("crowsnest.mp3");
-    
     myGameArea.start();
     
 }
@@ -131,13 +132,20 @@ function updateGameArea() {
     for (i = 0; i < myObstacles.length; i += 1) {
         if (myGamePiece.crashWith(myObstacles[i])) {
             mySplash.play();
+            myMusic.stop();
             myGameArea.stop();
+            myGameArea.clear();
+            myScore.text = "SCORE: " + myGameArea.frameNo;
+            myScore.update();
+            myGameOverText.text = "GAME OVER";
+            myGameOverText.update();
+            document.getElementById("play").style.visibility = "visible"; 
             return;
         } 
     } 
     myGameArea.clear();
     myGameArea.frameNo += 1;
-    if(myGameArea.frameNo == 50){
+    if(myGameArea.frameNo == 100){
         myMusic.play();
     }
     if (myGameArea.frameNo == 1 || everyinterval(150)) {

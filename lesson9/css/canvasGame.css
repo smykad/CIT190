@@ -20,3 +20,20 @@ button {
     margin-left: auto;
     display: block;
 }
+
+table, th, td {
+    margin-top:2%;
+    border: 1px solid;
+    font-size: 14px;
+}
+table{
+    color: #044553;
+    background-color: #b4d2d3;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+p{
+    text-align:right;
+    color:#152636;
+}
