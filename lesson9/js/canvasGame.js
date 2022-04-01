@@ -4,11 +4,17 @@ var c = w*.05;
 var ow = w*.005;
 var oh = w*.4; 
 
+const up = document.getElementById('up')
+const down = document.getElementById('down')
+const left = document.getElementById('left')
+const right = document.getElementById('right')
+
 
 function startGame() {
     myGameArea.start();
-    myGamePiece = new component(c, c, "blue", w*.01, h*.5)
+    myGamePiece = new component(c, c, 'pirate', w*.01, h*.5)
     myObstacle = new component(ow, oh, "orange", w*.25, h*.5)
+
 }
 
 
@@ -33,16 +39,24 @@ var myGameArea = {
 // Create the component 
 
 function component(width, height, color, x, y) {
+    const myShip = new Image();
     this.width = width;
     this.height = height;
     this.speedX = 0;
     this.speedY = 0;
     this.x = x;
     this.y = y;
+    myShip.src = "media/pirate.png";
+
     this.update = function() {
-        ctx = myGameArea.context;
-        ctx.fillStyle = color;
-        ctx.fillRect(this.x, this.y, this.width, this.height);
+        if (color==="pirate"){
+            ctx.drawImage(myShip, this.x, this.y, this.width, this.height);
+        }
+        else{
+            ctx = myGameArea.context;
+            ctx.fillStyle = color;
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+        }
     }
     this.newPos = function() {
         this.x += this.speedX;
@@ -88,11 +102,6 @@ function moveleft() { myGamePiece.speedX = -1; }
 function moveright() { myGamePiece.speedX = 1; }
 
 function clearmove() { myGamePiece.speedX = 0; myGamePiece.speedY = 0; }
-
-const up = document.getElementById('up')
-const down = document.getElementById('down')
-const left = document.getElementById('left')
-const right = document.getElementById('right')
 
 // Up Button
 up.addEventListener('mousedown', event => {moveup();})
