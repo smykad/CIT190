@@ -23,7 +23,7 @@ function startGame() {
     myScore = new component(c*.75+"px", "Consoloas", "white", w*.01, h*.06, "text");
     myGameOverText = new component(c*.75+"px", "Consoloas", "white", w*.01, h*.06, "text");
     mySplash = new sound("media/piratesink.wav");
-    myMusic = new sound("crowsnest.mp3");
+    myMusic = new sound("media/crowsnest.mp3");
     myGameArea.start();
     
 }
