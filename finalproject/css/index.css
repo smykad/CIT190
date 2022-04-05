@@ -36,6 +36,10 @@ a:active {
     margin-right:auto;
     margin-left:auto;
 }
+.centerGame{
+    margin-right:auto;
+    margin-left:25%;
+}
 .right{
     margin-left:auto;
 }
@@ -107,6 +111,7 @@ nav {
 	text-align: center;
     width:100%;
 }
+
 
 
 footer{

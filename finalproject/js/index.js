@@ -1,9 +1,13 @@
 $(document).ready(function() {
+    var w = window.innerWidth/2;
+    var h = w*.7;
     
+    $("#mydiv")
+            .html('<object data="https://lisabalbach.com/smykad/CIT190/lesson9/canvasGame.html" marginLeft="25%" width="' +w + '" height="' + h + '" style="overflow:auto;border:5px groove rgb(114, 137, 218)"/>');
     // event listeners for the navigation bar 
     $('#home').on('click', function(){location.assign("index.html")})
     $('#ttt').on('click', function(){location.assign("tictactoe.html")})
-    $('#mem').on('click', function(){location.assign("memory.html")})
+    $('#mem').on('click', function(){location.assign("canvas.html")})
     $('#dnd').on('click', function(){location.assign("draganddrop.html")})
     $('#txt').on('click', function(){location.assign("readme.md")})
     // grab the initial top offset of the navigation 
