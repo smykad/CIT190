@@ -1,8 +1,8 @@
 // variables for determining the size of the canvas
 // By doing this the page is responsive based on the size of the screen the user is on so it adjusts 
 // the size of everything based on scale
-var w = window.innerWidth/2;
-var h = w*.55;
+var w = window.innerWidth*.8;
+var h = window.innerHeight*.8;
 var c = w*.05;
 var ow = w*.005;
 var oh = w*.4; 
@@ -227,10 +227,10 @@ function clearmove() { myGamePiece.speedX = 0; myGamePiece.speedY = 0; }
 
 document.addEventListener('keydown', (event)=>{
     var name = event.key;
-    if(name==='w' || name==='ArrowUp'){moveup();}
-    if(name==='s' || name==='ArrowDown'){movedown();}
-    if(name==='a' || name==='ArrowLeft'){moveleft();}
-    if(name==='d' || name==='ArrowRight'){moveright();}
+    if(name==='w' ){moveup();}
+    if(name==='s' ){movedown();}
+    if(name==='a' ){moveleft();}
+    if(name==='d' ){moveright();}
 }, false);
 document.addEventListener('keyup', (event)=>{clearmove();}, false);
 
