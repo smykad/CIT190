@@ -1,19 +1,17 @@
-var w = window.innerWidth*.9;
-var h = window.innerWidth*.6;
+$(document).ready(function() {
+    // get the width and heights of the window so it can be adjusted according to the size of the users window
 
-function startGame(){
-    myGameArea.start();
+    var w = window.innerWidth*.8;
+    var h = window.innerWidth*.4;
+    var c = w*.1;
     
-}
-
-// Create the canvas 
-var myGameArea = {
-    canvas : document.createElement("canvas"),
-    start : function() {
-        this.canvas.width = w;
-        this.canvas.height = h;
-        this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-        
-    }
-}
+    // adjust the size of the mygame object
+    $("#myGame").html('<object width="' + w + '" height="' + h + '"/>');
+    $('#myGame').prepend('<img class="drag" src="media/pirate.png"' + c + '" height="' + c + '" />');
+    $('#myGame').append('<img class="drag" src="media/pirate.png"' + c + '" height="' + c + '" />');
+    
+    $('.drag').draggable({
+        containment: "#myGame"
+    });
+    
+});

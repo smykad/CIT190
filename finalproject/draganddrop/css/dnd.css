@@ -7,9 +7,9 @@ body{
     background-attachment: fixed;
     background-color:rgb(153, 170, 181);
 }
-canvas {
+div {
     border: 1px solid #d3d3d3;
-    background: linear-gradient(to bottom right, #152636, #259faf, #b4d2d3, #57b8bc, #044553);
+    background: #259faf;
     margin-right: auto;
     margin-left: auto;
     display: block;
