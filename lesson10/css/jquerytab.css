@@ -1,0 +1,41 @@
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    width:50%;
+    text-align:center;
+    padding:20px;
+   }
+div{    
+    border-radius:0px 0px 25px 25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+  
+}
+ul{
+	list-style:none;
+	display:inline-flex;
+	background-color:darkblue;
+}	
+.tab li {
+	background-color:black;
+	color:white;
+	border-radius:0px 0px 25px 25px;
+	width:150px;
+}
+.tab a {
+	padding:5px 10px;
+	display:inline-block;
+	background:darkslategray;
+	color:lemonchiffon;
+	text-decoration:none;
+	margin-right:20px;
+	border-radius:0px 0px 25px 25px;
+	width:150px;
+}
+.tab a.active {
+	background:lemonchiffon;
+	color:darkblue;
+}

@@ -1,0 +1,68 @@
+
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Tabs functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/swanky-purse/jquery-ui.css" rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <script>
+         $(function() {
+            $( "#tabs-menu" ).tabs({
+               heightStyle:"fill",
+               collapsible:true,
+               hide:"slideUp",
+               show:"slideDown"
+            });
+         });
+      </script>
+      <style>
+         #tabs-menu{font-size: 14px;}
+         .ui-widget-header {
+            background:darkolivegreen;
+            border: 1px solid #b9cd6d;
+            color: #FFFFFF;
+            font-weight: bold;
+         }
+         .center {
+		    margin: auto;
+		    width: 50%;
+		    padding: 10px;
+		 }
+		 body{
+			background-color:darkgoldenrod;
+		}
+		p, a{
+		 font-size:1.5em;
+		}
+      </style>
+   </head>
+	
+   <body> 
+      <nav id = "tabs-menu" class="center">
+         <ul>
+            <li><a href = "#tabs-1">Luffy</a></li>
+            <li><a href = "#tabs-2">Zoro</a></li>
+            <li><a href = "#tabs-3">Sanji</a></li>
+         </ul>
+         <div id = "tabs-1">
+            <p>Monkey D. Luffy, also known as "Straw Hat Luffy" and commonly as "Straw Hat", 
+                is the main protagonist of the manga and anime, One Piece.</p>
+            <p><img src="media/luffy.png" alt="retro poster new york"></p>
+         </div>
+         <div id = "tabs-2">
+            <p>Roronoa Zoro, also known as "Pirate Hunter" Zoro, is the combatant of the Straw Hat Pirates, 
+                and one of their two swordsmen. Formerly a bounty hunter, he is the second member of Luffy's 
+                crew and the first to join it, doing so in the Romance Dawn Arc.</p>
+            <p><img src="media/zoro.png" alt="retro poster hawaii"></p>
+         </div>
+         <div id = "tabs-3">
+            <p>
+                "Black Leg" Sanji, born as Vinsmoke Sanji, is the cook of the Straw Hat Pirates. He is the fifth 
+                member of the crew and the fourth to join, doing so at the end of the Baratie Arc.</p>
+              <p><img src="media/sanji.png" alt="retro poster alaska"></p>
+         </div>
+      </nav>
+   </body>
+</html>
