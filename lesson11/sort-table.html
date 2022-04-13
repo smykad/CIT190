@@ -1,62 +1,81 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>JavaScript &amp; jQuery - Chapter 12: Filtering, Searching, and Sorting</title>
+    <title>Sort Table</title>
     <link rel="stylesheet" href="css/c12.css" />
   </head>
   <body>
     <header>
-      <h1>CreativeFolk</h1>
+      <h1>Straw Hat Pirates</h1>
     </header>
-
     <div class="about">
-      <h2>My Videos</h2>
+      <h2 class="strokeme">Crewmates</h2>
       <div class="bio">
-        <img src="img/camille.jpg" alt="Camille's profile picture" />
-        <h4>Camille Berger</h4>
-        <div class="location">Paris, France</div>
+        <img src="media/luffy.png" alt="Luffy"/>
+        <img src="media/zoro.png" alt="Zoro"/>
+        <img src="media/nami.png" alt="Nami"/>
+
       </div>
     </div>
 
     <table class="sortable">
       <thead>
         <tr>
-          <th data-sort="name">Genre</th>
-          <th data-sort="name">Title</th>
-          <th data-sort="duration">Duration</th>
-          <th data-sort="date">Date</th>
+          <th data-sort="string">Name</th>
+          <th data-sort="string">Role</th>
+          <th data-sort="age" class="center-align">Age</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Animation</td>
-          <td>Wildfood</td>
-          <td>3:47</td>
-          <td>2014-07-16</td>
+          <td>Luffy</td>
+          <td>Captain</td>
+          <td class="center-align">19</td>
         </tr>
         <tr>
-          <td>Film</td>
-          <td>The Deer</td>
-          <td>6:24</td>
-          <td>2014-02-28</td>
+          <td>Zoro</td>
+          <td>Swordsman</td>
+          <td class="center-align">21</td>
         </tr>
         <tr>
-          <td>Animation</td>
-          <td>The Ghost</td>
-          <td>11:40</td>
-          <td>2012-04-10</td>
+          <td>Sanji</td>
+          <td>Chef</td>
+          <td class="center-align">21</td>
         </tr>
         <tr>
-          <td>Film</td>
-          <td>Animals</td>
-          <td>6:40</td>
-          <td>2005-12-21</td>
+          <td>Nami</td>
+          <td>Navigator</td>
+          <td class="center-align">20</td>
         </tr>
         <tr>
-          <td>Animation</td>
-          <td>Wagons</td>
-          <td>21:40</td>
-          <td>2007-04-12</td>
+          <td>Franky</td>
+          <td>Shipwright</td>
+          <td class="center-align">36</td>
+        </tr>
+        <tr>
+          <td>Jinbe</td>
+          <td>Helmsman</td>
+          <td class="center-align">46</td>
+        </tr>
+        <tr>
+          <td>Usopp</td>
+          <td>Sniper</td>
+          <td class="center-align">19</td>
+        </tr>
+        <tr>
+          <td>Robin</td>
+          <td>Archaeologist</td>
+          <td class="center-align">30</td>
+        </tr>
+        <tr>
+          <td>Chopper</td>
+          <td>Doctor</td>
+          <td class="center-align">17</td>
+        </tr>
+        <tr>
+          <td>Brook</td>
+          <td>Musician</td>
+          <td class="center-align">90</td>
         </tr>
       </tbody>
     </table>
