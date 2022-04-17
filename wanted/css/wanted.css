@@ -1,0 +1,27 @@
+body{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:16pt;
+    background-image:url('../media/background.png');
+    background-repeat:no-repeat;
+    background-size: fill;
+    background-attachment: fixed;
+    background-color:rgb(153, 170, 181);
+}
+div {
+    border: 1px solid #d3d3d3;
+    background: #259faf;
+    margin-right: auto;
+    margin-left: auto;
+    display:block;
+}
+.myDiv{
+    z-index: 2;
+    opacity: .9;
+}
+.myPoster {
+    background-color: blanchedalmond;
+    z-index: 4;
+}
+span{
+    color:white;
+}

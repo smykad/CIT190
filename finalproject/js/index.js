@@ -8,6 +8,8 @@ $(document).ready(function() {
             .html('<object data="pirategame/canvasGame.html" marginLeft="25%" width="' +w + '" height="' + h + '" style="overflow:auto;border:5px groove rgb(114, 137, 218)"/>');
     $("#mydiv2")
             .html('<object data="draganddrop/pirateDragNDrop.html" marginLeft="25%" width="' +w + '" height="' + h + '" style="overflow:auto;border:5px groove rgb(114, 137, 218)"/>');
+    $("#mydiv3")
+            .html('<object data="wanted/ttt.html" marginLeft="25%" width="' +w + '" height="' + h + '" style="overflow:auto;border:5px groove rgb(114, 137, 218)"/>');
     // event listeners for the navigation bar 
     $('#home').on('click', function(){location.assign("index.html")})
     $('#ttt').on('click', function(){location.assign("tictactoe.html")})
