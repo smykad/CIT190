@@ -12,5 +12,6 @@ div {
     background: #259faf;
     margin-right: auto;
     margin-left: auto;
-    display: block;
+    display:flex;
+ 	flex-wrap:wrap;
 }
