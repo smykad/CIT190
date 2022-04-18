@@ -18,6 +18,8 @@ $(document).ready(function() {
     $('#txt').on('click', function(){location.assign("readme.md")})
     // I will be adding more for the other games readme's as well
     $('#rdp').on('click', function(){location.assign("pirategame/readme.txt")})
+    $('#rdd').on('click', function(){location.assign("draganddrop/readme.txt")})
+    $('#rdw').on('click', function(){location.assign("wanted/readme.txt")})
     // grab the initial top offset of the navigation 
        var stickyNavTop = $('#navbar').offset().top;
        
