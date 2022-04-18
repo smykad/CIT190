@@ -9,10 +9,10 @@ $(document).ready(function() {
     $("#mydiv2")
             .html('<object data="draganddrop/pirateDragNDrop.html" marginLeft="25%" width="' +w + '" height="' + h + '" style="overflow:auto;border:5px groove rgb(114, 137, 218)"/>');
     $("#mydiv3")
-            .html('<object data="wanted/ttt.html" marginLeft="25%" width="' +w + '" height="' + h + '" style="overflow:auto;border:5px groove rgb(114, 137, 218)"/>');
+            .html('<object data="wanted/wantedposter.html" marginLeft="25%" width="' +w + '" height="' + h + '" style="overflow:auto;border:5px groove rgb(114, 137, 218)"/>');
     // event listeners for the navigation bar 
     $('#home').on('click', function(){location.assign("index.html")})
-    $('#ttt').on('click', function(){location.assign("tictactoe.html")})
+    $('#ttt').on('click', function(){location.assign("wanted.html")})
     $('#mem').on('click', function(){location.assign("canvas.html")})
     $('#dnd').on('click', function(){location.assign("draganddrop.html")})
     $('#txt').on('click', function(){location.assign("readme.md")})

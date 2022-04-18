@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Bounty Poster</title></head>
+<style>
+    body{background-color: black;background-image:url('media/background.png')}
+    img{width:232px;height:165px;display: block;margin-left: auto;margin-right: auto;}
+    .div{background-image: url('media/wanted.png');background-color: blanchedalmond;background-repeat: no-repeat;width:280px;height:392px;margin-left: auto;margin-right: auto;}
+    .center{margin-left: auto;margin-right: auto;flex-wrap: wrap;width:20%;margin-top: 2%;}
+    input[type=file]{display:none;}
+    input[type=text]{width:90%;margin-left:3%;margin-right: 5%;box-sizing: border-box;display: block;color: brown;background: bisque;}
+    .custom-file-upload {border: 1px solid #ccc;border-radius: 3.5%;display: inline-block;padding: 6px 12px;cursor: pointer;color:brown;background-color: bisque;}
+    label{margin-top: 1%;margin-left:4%;margin-right:1%;width:100px;height:15px;text-align: center;}
+    label:hover{ background-color: brown;color: bisque;}
+    h1{text-align: center;font-size: 36px;}
+    h2{text-align: center; font-size:48px;padding-top: -10px;}
+</style>
+<body>
+    <div class="div" id="poster"><br><br><br><br><br><img id="output"/><h1 id="name"></h1></div>
+    <div class="center"><input type="text" value="" id="myName" placeholder="Put name here" maxlength="12"><br><label class="custom-file-upload"><input type="file" accept="image/*" onchange="loadFile(event)">Upload Image</label><label id="myButton" class="custom-file-upload">Add Name</label></div>
+</body>
+<script>
+var loadFile = function(event) {
+    var output = document.getElementById('output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+    output.onload = function() {
+    URL.revokeObjectURL(output.src)}};
+document.getElementById("myButton").addEventListener("click", function(){
+    var lol = document.getElementById('myName').value;
+    document.getElementById("name").innerHTML = lol;
+    });
+</script>
+</html>
